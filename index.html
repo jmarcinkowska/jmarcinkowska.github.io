@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Doc</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="grid.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li> <a href="#general">Definicja</a></li>
+            <li> <a href="#math">Matematyka</a></li>
+            <li> <a href="#fibonacci">Fibonacci</a></li>
+            <li><a href="#anim">Animacja</a></li>
+            <li><a href="#arch">Zastosowanie</a></li>
+        </ul>
+
+    </nav>
+    <header>
+        <canvas id="canvas"></canvas>
+        <p></p>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); show()" id="show">×</a>
+        <h3>Dokumentacja</h3>
+        <p>Strona powstała przy użyciu HTML5, CSS 3.0 oraz JavaScript. Animacja została wykonan przy pomocy elementy
+            &lt;canvas&gt;. Obsługa zdarzeń została zrealizowana za pomocą funkcji "onclick()".Zostały wykorzystana
+            funckja JavaScript "getElementById". Zostały wykorzystane elementy HTML5 takie jak &lt;nav&gt; i
+            &lt;header&gt;.</p>
+    </div>
+    <div id="doc">
+        <button class="openbtn" id="hid" onclick="openNav(); hide();">
+            <p class="vert">Dokumentacja</p>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row" id="general">
+            <div class="col-md-6">
+                <h2>Definicja</h2>
+                <p>Złota liczba znana również jako złoty podział, złota proporcja lub podział harmoniczny i jest
+                    oznaczany grecką literą φ. Jest to podział
+                    odcinka na dwie części w taki sposób, że stosunek długości dłuższej części do krótszej jest taki
+                    sam jak
+                    stosunek całego odcinka do dłuższej części. Wartość złotej liczby wynosi: <br />
+                    <em>φ = 1.6180339887...</em><br /> Złoty podział znany był już w starożytności i przypisywano mu
+                    wyjątkowe walory estetyczne. Złoty podział (łac. sectio aurea) jest nazywany również złotym
+                    stosunkiem, złotym środkiem,
+                    boską proporcją, boskim podziałem lub środkiem Fidiasza. Aby podnieść złotą liczbę do kwadratu
+                    należy dodać do niej 1, oraz aby znaleźć odwrotność złotej liczby, wyystarczy odjąć od niej 1.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="golden-ratio.png" id="ratio" alt="złoty podział">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <p id="math"><img src="wiki.png" id="wiki" alt="spirala Fibonacciego"></p>
+            </div>
+            <div class="col-md-5 offset-md-1">
+                <br />
+                <h2>Złota liczba w matematyce</h2>
+                <p>Dwie wielokości są w złotym stosunku φ jeżeli: a/b = φ.<br /><img src="1.svg" alt="wzor" id="one">
+                    Aby znaleźć φ należy zacząć od lewej strony. Z rozdzielenia równości dzielenia względem dodawania i
+                    podstawienie b/a = 1/φ wynika: <br />
+                    <img src="2.svg" alt="wzor" id="two"> Równanie ma dwa rozwiązania rzeczywiste, z których jedno jest
+                    dodatnie<br />
+                    <img src="3.svg" id="three" alt="wzor"><br /> </p>
+
+            </div>
+        </div>
+        <div class="row" id="fibonacci">
+            <div class="col-md-6">
+                <br />
+                <br />
+                <br />
+                <h2>Związek z ciągiem Fibonacciego</h2>
+                <p>Ciąg Fibonacciego to ciąg liczb naturalnych określony przez warunek: Pierwszy wyraz
+                    ciągu jest równy 0, kolejny jest równy 1, każdy następny jest sumą dwóch poprzednich wyrazów.
+                    Liczbami Fibonaccieego nazywamy kolejne wyrazy ciągu.Złoty
+                    podział i ciąg Fibonacciego są ze są blisko powiązane ze sobą. Ciąg Fibonacciego
+                    ma postać:
+                    1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...<br />
+                    Wzór Bineta dla ciągu Fibonacciego zawiera złoty stosunek:<br />
+                    <img src="4.svg" id="four" alt="wzor"><br /> Kolejne przybliżenia złotej liczby można otrzymać,
+                    obliczając
+                    ilorazy
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="fib2">
+                    <p>sąsiednich liczb Fibonacciego, co daje:
+                        <img src="5.svg" id="five" alt="wzor"><br /> Ostatni zapisany ułamek daje złotą liczbę z
+                        przybliżeniem do
+                        0.001. Jeżeli wyraz ciągu Fibonacciego jest podzielony przez swojego bezpośredniego poprzednika
+                        w
+                        ciągu, to
+                        iloraz jest przybliżeniem złotej liczby fi. Przybliżenia te mogą być wyższe lub niższe od φ.
+                        Kolejne
+                        potęgi φ są do siebie w zgodzie z równaniem rekurencyjnym Fibonacciego które ma postać:
+                        <img src="6.svg" class="formula" alt="wzor"></p>
+                </div>
+            </div>
+        </div>
+        <h2 id="anim">Animacja podziału</h2>
+        <canvas id="c" height="421" width="681"></canvas>
+
+        <div class="row">
+            <div class="col-md-6" id="arch1">
+                <br />
+                <br />
+                <br />
+                <h2>Zastosowanie</h2>
+                <h4>Architektura</h4>
+                <p>
+                    Złoty podział można zauważyć w wielu budowlach architektonicznych. Jednym z nich jest fasada
+                    Partenonu, oraz wiele elementów znajdujących się na niej. Uznaje się że wiele proporcji
+                    Partenonu
+                    zachowuje złoty podział. Również geometryczna analiza Wielkiego Meczetu z Kairouan ujawnia
+                    konsekwentne zastosowanie złotego podziału w wystroju. Można znaleźć go w ogólnych proporcjach
+                    planu
+                    i wymiarach miejsca modlitwy, minaretu i sądu. Szwajcarski architekt Mario Botta, oparł wiele
+                    swoich
+                    planów na figurach geometrycznych. W jednym z domów jego autorstwa złoty stosunek panuje
+                    pomiędzy
+                    boczną i centralną częścią domu.
+                </p>
+            </div>
+            <div class="col-md-6" id="arch2">
+                <h4>Malarstwo</h4>
+                <p>
+                    Filozof Heinrich Agrippa narysował człowieka na pentagramie wpisanym w koło, co sugeruje związek
+                    ze
+                    złotym podziałem. Leonardo da Vinci ilustrował wielościany i pisał, że niektóre proporcje ciała
+                    zachowują złoty stosunek. Sugestie, że Mona Lisa zachowuje złoty podział nie jest poparta w
+                    żadncyh
+                    zapisach samego Leonarda. Salvador Dali jawnie użył złotego podziału w dziele Sakramtent
+                    Ostatniej
+                    Wieczerzy. Wymiary płotna są wymiarami złotego prostkąta.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="arch">
+            <div class="col-md-4 img-responsive" id="im1">
+                <div class="polaroid">
+                    <img src="arch1.jpg" class="im" alt="Partenon">
+                    <div class="ct">
+                        <p>Partenon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 img-responsive" id="im2">
+                <div class="polaroid">
+                    <img src="arch2.jpg" class="im" alt="Taj Mahal">
+                    <div class="ct">
+                        <p>Taj Mahal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 img-responsive" id="im3">
+                <div class="polaroid">
+                    <img src="dot.png" class="im" alt="obraz Stworzenie Adama">
+                    <div class="ct">
+                        <p>Stworzenie Adama - Michał Anioł</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Informacje oraz obrazy zawarte na stronie pochodzą z Wikipedii</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
